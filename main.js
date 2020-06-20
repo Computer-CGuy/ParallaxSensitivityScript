@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('div').each(function(){
       //console.log($(this).attr('story'))
         if($(this).attr('story')!=undefined){
-        a.push([$(this),$(this).offset().top,$(this).attr('m'),$(this).attr('s')])
+        a.push([$(this),$(this).offset().top,$(this).attr('m'),$(this).attr('s'),$(this).attr('is')])
       }
     });
 })
@@ -21,7 +21,14 @@ $(window).scroll(function(){
            t+=' scale('+ ((  (  (  (  wScroll+ (  height / 2) )-(a[i][1]))/a[i][3]))/1000+1)+')'
             
         }
+        if(a[i][4]!=undefined){
+          a[i][0].css('background-size',((  (  (  (  wScroll+ (  height / 2) )-(a[i][1]))/a[i][4]))/1+100)+'%')
+            
+            //bg+=' scale('+ +')'
+            
+        }
        a[i][0].css('transform',t)
+        
         console.log(t)
     }
     
