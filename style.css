@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    padding:0;
+}
+.slide{
+    height:100%;
+    
+    
+    
+}
+.story1{
+    background-image: url('image.jpeg');
+    height: 100%;
+    width:600px;
+}
+.slide1{
+    padding: 25%;
+    background-color: orange;
+}
+.slide2{
+    background-color: red;
+}
